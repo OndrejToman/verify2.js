@@ -129,7 +129,7 @@ $(document).ready(function(){
       $(form_object_selector).each(function(){
         var input_objekt = $(this); // Nastavení objektu
 
-        input_objekt.removeClass('wrong-input'); // Před validací odstraníme classu wrong input ze všech inputů ve formuláři
+        input_objekt.removeClass(wrong_input_class_name); // Před validací odstraníme classu wrong input ze všech inputů ve formuláři
 
         /*
         Proměnné potřebné pro práci s inputem
