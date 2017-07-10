@@ -37,11 +37,11 @@ $(document).ready(function(){
     }
 
     /*
-    ------ Pravidla pro formuláře: ------
+    ------ Rules for validation: ------
 
-    Dostupné inputy:
+    Available rules:
     -------------------------------------
-    Název (pravidlo) - (příklad)
+    Name (rule) - (example)
     -------------------------------------
     telefon (čísla, +, mezery) - (+123 123 456 789)
     jmeno (velká + malá písmena, mezery) - (Jan Někdo Něco)
@@ -52,10 +52,10 @@ $(document).ready(function(){
     */
 
     /*
-    Funkce pro validaci inputu.
-    Vrací
-      -> True: Validní
-      -> False: Nevalidní
+    Method for input validation
+    Returns
+      -> True: Valid
+      -> False: Invalid
     */
     function validuj_input(value, type){
       if(type == "telefon"){
