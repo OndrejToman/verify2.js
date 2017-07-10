@@ -1,16 +1,18 @@
 $(document).ready(function(){
 
   /*
-  Konfigurační proměnné pro debug
+  Configuration variables
   */
   var debug_mode = false; // TRUE -> Bude vypisovat průběh scriptu do konzole (např. chyby při kontrolách inputů, druhy inputů atp.)
   var send_form = true; // Má se po dokončení skriptu ( a pokud jsou všechny inputy validní ) odeslat formulář ? ( Pro účely debugu, pokud nechceme spamovat emailovou schránku příjemce )
+  var add_id_to_all_forms = true; // Automatically add IDs to all forms on page (if form already have one, no ID vill be added by this scripr)
+  var wrong_input_class_name = "wrong-input"; // Class that will be added to non valid forms
+
 
   /*
-  Další konfigurační proměnné
+  Regular expressions
   */
-  var add_id_to_all_forms = true;
-  var wrong_input_class_name = "wrong-input";
+  var regex_phone = /^(\+420)?[0-9]{9}$/;
 
 
   /*
@@ -62,7 +64,7 @@ $(document).ready(function(){
         if(debug_mode == true){
           console.log('Upravené číslo je: ' + upraveny_string);
         }
-        var key = /^(\+420)?[0-9]{9}$/;
+        var key = regex_phone;
 
         if(key.test(upraveny_string)) {
           return true;

@@ -12,7 +12,10 @@ You need jQuery to run this
 5) If you want input to be requiered, just add requiered attribute ( just like in standard browser validation )
 
 ## Input types
-Comming soon...
+Type - name (data-typ) - examples (splitted by -)
+---------------------
+Phone - phone - (+420 123 456 789 - +420 is optional and so spaces are)
+More examples comming soon...
 
 ## How does this script work?
 Comming soon...
