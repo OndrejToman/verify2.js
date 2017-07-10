@@ -3,8 +3,8 @@ $(document).ready(function(){
   /*
   Configuration variables
   */
-  var debug_mode = false; // TRUE -> Bude vypisovat průběh scriptu do konzole (např. chyby při kontrolách inputů, druhy inputů atp.)
-  var send_form = true; // Má se po dokončení skriptu ( a pokud jsou všechny inputy validní ) odeslat formulář ? ( Pro účely debugu, pokud nechceme spamovat emailovou schránku příjemce )
+  var debug_mode = false; // Debug mode will write messages to JS console (for example about types of inputs)
+  var send_form = true; // After script is finished, decides if POST/GET form or not (if you want only test but dont want to actually send anything)
   var add_id_to_all_forms = true; // Automatically add IDs to all forms on page (if form already have one, no ID vill be added by this scripr)
   var wrong_input_class_name = "wrong-input"; // Class that will be added to non valid forms
 
@@ -16,24 +16,24 @@ $(document).ready(function(){
 
 
   /*
-    Funkce, která ve stránce vyhledá všechny formuláře a každému přidělí id.
-    Pokud formulář už id má, funkce id nezmění a ponechá původní
+    Function, that finds all <form> tags in document and adds ID to each
+    If <form> already have ID, this ID stays unchanged
     */
     function add_id_to_all_forms(){
-      var iteration = 1; // Formuláře počítáme od 1
-      var id_text = ""; // Pomocná proměnná
+      var iteration = 1; // Iteration of forms
+      var id_text = ""; // Auxilary variable
 
       $("form").each(function(){
-        id_text = "form_" + iteration; // Připravený text pro formulář
-        if(!$(this).attr('id')){ // Pokud formulř nemá svoje ID
-          $(this).attr('id',id_text); // Přidělí se automaticky vygenerované
+        id_text = "form_" + iteration; // Variable with prepared ID
+        if(!$(this).attr('id')){ // If form doesn't have ID already...
+          $(this).attr('id',id_text); // Add automatically generated ID
           iteration++;
         }
       });
     }
 
     if(add_id_to_all_forms == true){
-      add_id_to_all_forms(); // Pustíme funkci pro všechny formuláře
+      add_id_to_all_forms();
     }
 
     /*
