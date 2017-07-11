@@ -15,7 +15,7 @@ $(document).ready(function(){
   var expressions = Array();
   expressions["name"] = /^\D{1,} \D{1,}$/;
   expressions["email"] = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
-  expressions["phone"] = /^(\+420)?[0-9]{9}$/;
+  expressions["phone"] = /^(\+[0-9]{3})?( )?[0-9]{3}( )?[0-9]{3}( )?[0-9]{3}$/;
   expressions["date"] = /^\d{1,2}.\d{1,2}.\d{4}$/;
   expressions["text"] = /\D/;
   expressions["number"] = /\d/;
@@ -40,21 +40,6 @@ $(document).ready(function(){
     if(automatic_id == true){
       add_id_to_all_forms();
     }
-
-    /*
-    ------ Rules for validation: ------
-
-    Available rules:
-    -------------------------------------
-    Name (rule) - (example)
-    -------------------------------------
-    telefon (čísla, +, mezery) - (+123 123 456 789)
-    jmeno (velká + malá písmena, mezery) - (Jan Někdo Něco)
-    email (text, tečka, čísla @ text . text) - (nekdo.neco23@domana.com)
-    datum (2 čísla <= 31 . 2 čísla <= 12 . 4 čísla <= aktualní rok) - (13.10.1856)
-    text (nekontrolování)
-    .... možné další
-    */
 
     /*
     Method for input validation
