@@ -2,7 +2,7 @@
 Is simple to use library for verifying form inputs on websites.
 
 ## Requirements
-jQuery
+jQuery :(
 
 ## Installation guide
 1) Copy verify2.js to your website (via script tag)
@@ -21,11 +21,11 @@ __Every regular expression can be changed__
 * number (only 0-9 numbers)
 
 ## How to add your own input types or change existing one?
-1) Find array with regular expressions
+1) Find array with regular expressions:
 ```javascript
 var expressions = Array();
 ```
-2) Add your own
+2) Add your own or change existing
 3) Done!
 
 ## What does front-end validation mean?
