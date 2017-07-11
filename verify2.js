@@ -58,13 +58,14 @@ $(document).ready(function(){
       -> False: Invalid
     */
     function validuj_input(value, type){
+      var key = "";
       if(type == "telefon"){
         upraveny_string = value.replace(/\s+/g, ''); // Pro zjednodušení výrazů nahradíme případné mezery v tel. čísle
 
         if(debug_mode == true){
           console.log('Upravené číslo je: ' + upraveny_string);
         }
-        var key = regex_phone;
+        key = regex_phone;
 
         if(key.test(upraveny_string)) {
           return true;
@@ -72,7 +73,7 @@ $(document).ready(function(){
           return false;
         }
       }else if (type == "jmeno") {
-        var key = /^\D{1,} \D{1,}$/;
+        key = /^\D{1,} \D{1,}$/;
 
         if(key.test(value)) {
           return true;
@@ -80,7 +81,7 @@ $(document).ready(function(){
           return false;
         }
       }else if (type == "email") {
-        var key = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+        key = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
         if(key.test(value)) {
           return true;
@@ -88,7 +89,7 @@ $(document).ready(function(){
           return false;
         }
       }else if (type == "datum") {
-        var key = /^\d{1,2}.\d{1,2}.\d{4}$/;
+        key = /^\d{1,2}.\d{1,2}.\d{4}$/;
 
         if(key.test(value)) {
           return true;
