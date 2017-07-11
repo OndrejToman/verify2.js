@@ -5,7 +5,7 @@ $(document).ready(function(){
   */
   var debug_mode = false; // Debug mode will write messages to JS console (for example about types of inputs)
   var send_form = true; // After script is finished, decides if POST/GET form or not (if you want only test but dont want to actually send anything)
-  var add_id_to_all_forms = true; // Automatically add IDs to all forms on page (if form already have one, no ID vill be added by this scripr)
+  var automatic_id = true; // Automatically add IDs to all forms on page (if form already have one, no ID vill be added by this scripr)
   var wrong_input_class_name = "wrong-input"; // Class that will be added to non valid forms
 
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
       });
     }
 
-    if(add_id_to_all_forms == true){
+    if(automatic_id == true){
       add_id_to_all_forms();
     }
 
