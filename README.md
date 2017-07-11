@@ -29,4 +29,4 @@ var expressions = Array();
 3) Done!
 
 ## What does front-end validation mean?
-That meas, this script runs in browser, so anyone can disable it. So make sure to validate your inputs in back-end.
+That meas, this script runs in browser, so anyone can disable it. So make sure to validate your inputs also at back-end!
