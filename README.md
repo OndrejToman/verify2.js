@@ -1,4 +1,4 @@
-# Verify2.js
+# Verify2.js (DEPRECATED)
 Is simple to use library for verifying form inputs on websites.
 
 ## Requirements
